@@ -82,7 +82,7 @@ La aplicación utiliza Docker para funcionar de manera consistente en todas las 
 4. **Descargar un Modelo de IA**:
    ```bash
    docker exec -it libreimagen-4-ollama-1 bash
-   ollama pull mistral
+   ollama pull qwen2.5-coder:7b
    exit
    ```
 
