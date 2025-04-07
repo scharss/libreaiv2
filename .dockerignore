@@ -1,0 +1,39 @@
+# Directorios de entorno virtual
+venv/
+env/
+.env/
+
+# Archivos y directorios de Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# Directorios de datos (opcional, estos se montarán como volúmenes)
+# uploads/
+# data/
+
+# Archivos específicos de Git
+.git/
+.gitignore
+
+# Archivos de Docker
+.dockerignore
+Dockerfile
+docker-compose.yml
+
+# Archivos de configuración y documentación
+*.md
+*.txt.example
+*.log
+
+# Archivos temporales
+*.tmp
+*.bak
+*.swp
+.DS_Store 
