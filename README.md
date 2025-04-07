@@ -1,97 +1,97 @@
-# Libre AI - Chat con IA Local en Docker
+# Libre AI - Local AI Chat with Docker
 
-Una aplicación web de chat con IA local que utiliza modelos de Ollama, con procesamiento de PDFs, OCR de imágenes y múltiples conversaciones, todo disponible en una implementación Docker multiplataforma.
+A local AI chat web application that uses Ollama models, with PDF processing, image OCR, and multiple conversations, all available in a cross-platform Docker implementation.
 
 ![LibreAI](resources/libreai-screenshot.png)
 
-## 🌟 Características Principales
+## 🌟 Key Features
 
-- 💬 **Chat Interactivo con IA Local**: Sin conexión a servicios externos para máxima privacidad
-- 📊 **Soporte para Múltiples Modelos**: Compatible con cualquier modelo de Ollama (Mistral, Llama, Qwen, DeepSeek, etc.)
-- 📷 **OCR de Imágenes**: Extracción automática de texto de imágenes con soporte multilenguaje
-- 📁 **Gestión de Conversaciones**: Organiza tus chats en diferentes sesiones
-- 📄 **Procesamiento Avanzado de PDFs**: Análisis semántico y extracción de contenido
-- 🌓 **Tema Claro/Oscuro**: Interfaz adaptable a tus preferencias
-- 🌎 **Soporte Multiidioma**: Español e Inglés
-- ✨ **Resaltado de Código**: Visualización mejorada de fragmentos de código
-- 🧮 **Soporte para Fórmulas Matemáticas**: Renderizado de ecuaciones
-- 🔄 **Implementación Docker**: Fácil instalación y ejecución en cualquier plataforma
+- 💬 **Interactive Chat with Local AI**: No connection to external services for maximum privacy
+- 📊 **Support for Multiple Models**: Compatible with any Ollama model (Mistral, Llama, Qwen, DeepSeek, etc.)
+- 📷 **Image OCR**: Automatic text extraction from images with multilanguage support
+- 📁 **Conversation Management**: Organize your chats in different sessions
+- 📄 **Advanced PDF Processing**: Semantic analysis and content extraction
+- 🌓 **Light/Dark Theme**: Adaptable interface to your preferences
+- 🌎 **Multilanguage Support**: English and Spanish
+- ✨ **Code Highlighting**: Enhanced visualization of code snippets
+- 🧮 **Mathematical Formula Support**: Equation rendering
+- 🔄 **Docker Implementation**: Easy installation and execution on any platform
 
-## 🐳 Instalación con Docker
+## 🐳 Docker Installation
 
-La aplicación utiliza Docker para funcionar de manera consistente en todas las plataformas. Sigue estas instrucciones para instalarla en tu sistema.
+The application uses Docker to work consistently across all platforms. Follow these instructions to install it on your system.
 
-### Requisitos Previos
+### Prerequisites
 
 - [Docker](https://www.docker.com/products/docker-desktop/)
-- [Docker Compose](https://docs.docker.com/compose/install/) (incluido en Docker Desktop para Windows y Mac)
-- Al menos 8GB de RAM disponible
-- Aproximadamente 10GB de espacio en disco (variable según los modelos que descargues)
+- [Docker Compose](https://docs.docker.com/compose/install/) (included in Docker Desktop for Windows and Mac)
+- At least 8GB of available RAM
+- Approximately 10GB of disk space (varies depending on the models you download)
 
-### 🪟 Instalación en Windows
+### 🪟 Windows Installation
 
-1. **Instalar Docker Desktop**:
-   - Descarga [Docker Desktop para Windows](https://www.docker.com/products/docker-desktop/)
-   - Instala WSL 2 si es necesario (Windows 10/11):
+1. **Install Docker Desktop**:
+   - Download [Docker Desktop for Windows](https://www.docker.com/products/docker-desktop/)
+   - Install WSL 2 if necessary (Windows 10/11):
      ```powershell
      wsl --install
      ```
-   - Ejecuta el instalador de Docker Desktop y asegúrate de que la opción "Use WSL 2" esté seleccionada
-   - Reinicia tu computadora
+   - Run the Docker Desktop installer and make sure the "Use WSL 2" option is selected
+   - Restart your computer
 
-2. **Clonar/Descargar el Repositorio**:
+2. **Clone/Download the Repository**:
    ```powershell
-   git clone [URL_DEL_REPOSITORIO]
-   cd [NOMBRE_DEL_DIRECTORIO]
+   git clone [REPOSITORY_URL]
+   cd [DIRECTORY_NAME]
    ```
-   O descarga y extrae el ZIP del repositorio
+   Or download and extract the repository ZIP
 
-3. **Iniciar los Contenedores**:
+3. **Start the Containers**:
    ```powershell
    docker-compose up -d
    ```
 
-4. **Descargar un Modelo de IA**:
+4. **Download an AI Model**:
    ```powershell
    docker exec -it libreimagen-4-ollama-1 bash
    ollama pull qwen2.5-coder:7b
    exit
    ```
 
-5. **Acceder a la Aplicación**:
-   - Abre un navegador y ve a http://localhost:5000
+5. **Access the Application**:
+   - Open a browser and go to http://localhost:5000
 
-### 🍎 Instalación en macOS
+### 🍎 macOS Installation
 
-1. **Instalar Docker Desktop**:
-   - Descarga [Docker Desktop para Mac](https://www.docker.com/products/docker-desktop/)
-   - Ejecuta el instalador (asegúrate de seleccionar la versión correcta para tu Mac: Intel o Apple Silicon)
+1. **Install Docker Desktop**:
+   - Download [Docker Desktop for Mac](https://www.docker.com/products/docker-desktop/)
+   - Run the installer (make sure to select the correct version for your Mac: Intel or Apple Silicon)
 
-2. **Clonar/Descargar el Repositorio**:
+2. **Clone/Download the Repository**:
    ```bash
-   git clone [URL_DEL_REPOSITORIO]
-   cd [NOMBRE_DEL_DIRECTORIO]
+   git clone [REPOSITORY_URL]
+   cd [DIRECTORY_NAME]
    ```
-   O descarga y extrae el ZIP del repositorio
+   Or download and extract the repository ZIP
 
-3. **Iniciar los Contenedores**:
+3. **Start the Containers**:
    ```bash
    docker-compose up -d
    ```
 
-4. **Descargar un Modelo de IA**:
+4. **Download an AI Model**:
    ```bash
    docker exec -it libreimagen-4-ollama-1 bash
    ollama pull qwen2.5-coder:7b
    exit
    ```
 
-5. **Acceder a la Aplicación**:
-   - Abre un navegador y ve a http://localhost:5000
+5. **Access the Application**:
+   - Open a browser and go to http://localhost:5000
 
-### 🐧 Instalación en Linux
+### 🐧 Linux Installation
 
-1. **Instalar Docker y Docker Compose**:
+1. **Install Docker and Docker Compose**:
    - Ubuntu/Debian:
      ```bash
      sudo apt update
@@ -109,92 +109,92 @@ La aplicación utiliza Docker para funcionar de manera consistente en todas las 
      sudo systemctl enable --now docker
      ```
 
-2. **Agregar tu Usuario al Grupo Docker** (para usar Docker sin sudo):
+2. **Add Your User to the Docker Group** (to use Docker without sudo):
    ```bash
    sudo usermod -aG docker $USER
    ```
-   Cierra sesión y vuelve a iniciarla para que los cambios surtan efecto.
+   Log out and back in for the changes to take effect.
 
-3. **Clonar/Descargar el Repositorio**:
+3. **Clone/Download the Repository**:
    ```bash
-   git clone [URL_DEL_REPOSITORIO]
-   cd [NOMBRE_DEL_DIRECTORIO]
+   git clone [REPOSITORY_URL]
+   cd [DIRECTORY_NAME]
    ```
-   O descarga y extrae el ZIP del repositorio
+   Or download and extract the repository ZIP
 
-4. **Iniciar los Contenedores**:
+4. **Start the Containers**:
    ```bash
    docker-compose up -d
    ```
 
-5. **Descargar un Modelo de IA**:
+5. **Download an AI Model**:
    ```bash
    docker exec -it libreimagen-4-ollama-1 bash
    ollama pull qwen2.5-coder:7b
    exit
    ```
 
-6. **Acceder a la Aplicación**:
-   - Abre un navegador y ve a http://localhost:5000
+6. **Access the Application**:
+   - Open a browser and go to http://localhost:5000
 
-## 💡 Uso Básico
+## 💡 Basic Usage
 
-1. **Seleccionar un Modelo**:
-   - Haz clic en el ícono de configuración en la barra lateral
-   - Selecciona un modelo de la lista de modelos disponibles
+1. **Select a Model**:
+   - Click on the configuration icon in the sidebar
+   - Select a model from the list of available models
 
-2. **Iniciar una Conversación**:
-   - Haz clic en "Nuevo chat"
-   - Escribe tu mensaje en el campo de texto inferior
-   - Presiona Enter o haz clic en el ícono de enviar
+2. **Start a Conversation**:
+   - Click on "New chat"
+   - Type your message in the text field at the bottom
+   - Press Enter or click the send icon
 
-3. **Procesar PDFs**:
-   - Haz clic en el ícono de clip junto al campo de texto
-   - Selecciona un archivo PDF
-   - Espera a que se procese y luego realiza preguntas sobre su contenido
+3. **Process PDFs**:
+   - Click on the clip icon next to the text field
+   - Select a PDF file
+   - Wait for it to process and then ask questions about its content
 
-4. **Procesar Imágenes**:
-   - Haz clic en el ícono de cámara junto al campo de texto
-   - Selecciona una imagen
-   - La aplicación extraerá el texto mediante OCR y podrás realizar preguntas sobre su contenido
+4. **Process Images**:
+   - Click on the camera icon next to the text field
+   - Select an image
+   - The application will extract text using OCR and you can ask questions about its content
 
-## 🚀 Modelos Recomendados
+## 🚀 Recommended Models
 
-Para un rendimiento equilibrado, recomendamos estos modelos de Ollama:
+For balanced performance, we recommend these Ollama models:
 
-- **Mistral 7B**: Buen equilibrio entre rendimiento y velocidad, ideal para comenzar
-- **DeepSeek Coder**: Excelente para tareas relacionadas con programación
-- **Qwen2.5 Coder 7B**: Buen rendimiento en tareas generales y programación
-- **Llama2**: Opción potente para tareas de conversación general
+- **Mistral 7B**: Good balance between performance and speed, ideal for getting started
+- **DeepSeek Coder**: Excellent for programming-related tasks
+- **Qwen2.5 Coder 7B**: Good performance in general tasks and programming
+- **Llama2**: Powerful option for general conversation tasks
 
-## ⚠️ Solución de Problemas
+## ⚠️ Troubleshooting
 
-### No se pueden ver los modelos de Ollama
-- Asegúrate de haber descargado al menos un modelo usando `docker exec -it libreimagen-4-ollama-1 bash` y luego `ollama pull mistral`
-- Verifica que ambos contenedores estén en ejecución con `docker ps`
-- Revisa los logs con `docker logs libreimagen-4-web-1`
+### Cannot see Ollama models
+- Make sure you have downloaded at least one model using `docker exec -it libreimagen-4-ollama-1 bash` and then `ollama pull mistral`
+- Verify that both containers are running with `docker ps`
+- Check the logs with `docker logs libreimagen-4-web-1`
 
-### Error de conexión a la web
-- Asegúrate de que no haya otro servicio usando el puerto 5000
-- Comprueba si los contenedores están en ejecución con `docker ps`
-- Reinicia los contenedores: `docker-compose down` y luego `docker-compose up -d`
+### Web connection error
+- Make sure no other service is using port 5000
+- Check if the containers are running with `docker ps`
+- Restart the containers: `docker-compose down` and then `docker-compose up -d`
 
-### Problemas con PDFs
-- Asegúrate de que el PDF no esté protegido
-- Verifica que el PDF contenga texto seleccionable
+### Problems with PDFs
+- Make sure the PDF is not protected
+- Verify that the PDF contains selectable text
 
-### Problemas con el OCR
-- El OCR funciona mejor con imágenes claras y texto bien definido
-- El reconocimiento puede ser limitado con escritura a mano o fuentes inusuales
+### OCR Issues
+- OCR works best with clear images and well-defined text
+- Recognition may be limited with handwriting or unusual fonts
 
-## 🔒 Privacidad
+## 🔒 Privacy
 
-Toda la inferencia del modelo se realiza localmente en tu máquina. Ningún dato se envía a servicios externos, garantizando total privacidad en tus conversaciones.
+All model inference is performed locally on your machine. No data is sent to external services, ensuring total privacy in your conversations.
 
-## 📖 Licencia
+## 📖 License
 
-Este proyecto está licenciado bajo los términos especificados en el archivo LICENSE.
+This project is licensed under the terms specified in the LICENSE file.
 
 ---
 
-Para más información o soporte, visita [el repositorio del proyecto](https://github.com/tu-usuario/tu-repositorio).
+For more information or support, visit [the project repository](https://github.com/your-username/your-repository).
